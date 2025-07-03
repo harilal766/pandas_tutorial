@@ -14,4 +14,10 @@ s = pd.Series(data,index=index)
 
 ser = pd.Series(np.random.randn(limit))
 
-print(ser)
+# From dict
+
+d = {"b": 1, "a": 0, "c": 2}
+dfd = pd.Series(d)
+dfd = pd.Series(d, index=["b", "c", "d", "a"]) # adding a new index will show result as NaN, a std data marker for missing data
+
+print(dfd)
